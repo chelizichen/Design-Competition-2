@@ -13,5 +13,14 @@
 .defaultStyle
 {
   text-decoration: none;
-  color:rgb(30, 3, 54)
+  color:rgb(30, 3, 54);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.defaultStyle:hover
+{
+  background-color: brown;
 }

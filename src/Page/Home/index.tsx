@@ -1,4 +1,5 @@
 import React from "react";
+import { DayAdd } from "./components/dayAdd";
 import { URLComponent } from "./components/url";
 
 class Home extends React.Component{
@@ -6,7 +7,8 @@ class Home extends React.Component{
     {
         return(
             <div style={{width:'100%',overflow:'clip'}}>
-                <URLComponent/>
+                {/* <URLComponent/> */}
+                <DayAdd/>
             </div>
         )
     }
