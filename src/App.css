@@ -9,6 +9,7 @@
   bottom: 0;
   background-color: cadetblue;
   border-top:2px solid blanchedalmond;
+  z-index: 999;
 }
 .defaultStyle
 {
