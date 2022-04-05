@@ -85,7 +85,7 @@ class Vaccine extends React.Component{
                     return
                 }
                 this.vaccineData.shift();
-                console.log(this.state.initData);
+                // console.log(this.state.initData);
             })
         },1000)
     }
