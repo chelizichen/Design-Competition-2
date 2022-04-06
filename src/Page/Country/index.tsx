@@ -6,6 +6,9 @@ import { Pine2 } from "./components/pine2";
 import { Province } from "./components/province";
 import { Province1 } from "./components/province1";
 import { Province2 } from "./components/province2";
+import { Province3 } from "./components/province3";
+import { Regress } from "./components/regress";
+
 import { Vaccine } from "./components/vaccine";
 
 class Country extends React.Component{
@@ -36,6 +39,8 @@ class Country extends React.Component{
                 <Province/>
                 <Province1/>
                 <Province2/>
+                <Province3/>
+                <Regress/>
             </div>
         )
     }
