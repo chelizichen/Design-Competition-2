@@ -5,6 +5,8 @@ import { DayAdd1 } from "./components/dayAdd1";
 import { Dead } from "./components/dead";
 import { Heal } from "./components/heal";
 import {Index30} from './components/day30/index.jsx'
+import { AllAdd } from "./components/all/add";
+import { WhereAddMost } from "./components/whereAddMost";
 class Home extends React.Component{
     // nowConfirm: any
     state={
@@ -51,17 +53,19 @@ class Home extends React.Component{
         return(
             <div style={{width:'100%',overflow:'clip'}}>
                 <h1 style={{textAlign:"center"}}> 现有确诊 {this.state.nowConfirm} 人 </h1>
+                <AllAdd/>
                 <NavLink className="day30" to="day30">
                     30 日
                 </NavLink>
                 <Routes>
                     <Route path="day30" element={<Index30/>}></Route>
-                    </Routes>
+                </Routes>
                 {/* <URLComponent/> */}
                 <DayAdd/>
                 <DayAdd1/>
                 <Heal/>
                 <Dead/>
+                <WhereAddMost/>
             </div>
         )
     }

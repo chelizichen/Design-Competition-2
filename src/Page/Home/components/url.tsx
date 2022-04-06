@@ -10,7 +10,7 @@ function URLComponent()
         }).then(response=>response.json()).then(res=>{
             // console.log(res.data[121]);
             let newData = eval("("+res.data+")")
-            console.log(newData);
+            console.log('res.data',newData);
             
             // console.log(re.exec(res.data));
             // console.log(res.data.match(re));
