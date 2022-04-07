@@ -1,0 +1,16 @@
+.news1
+{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+.innerSpan
+{
+    font-size: 18px;
+    font-weight: 500;
+}
+.activeStyle1
+{
+    display: none;
+}
