@@ -1,8 +1,10 @@
 import React from 'react'
 import * as echarts from 'echarts'
 import axios from 'axios'
-import '../index.css'
-class DayAdd extends React.Component{
+import '../../index.css'
+
+class Heal extends React.Component
+{
     constructor(props)
     {
         super(props) ;
@@ -16,8 +18,8 @@ class DayAdd extends React.Component{
     {
         // 得到数据
         await this.getData()
-        console.log('this.testData',this.testData);
-        let currData = this.getMostAddDay()
+        // console.log('this.testData',this.testData);
+        this.getMostAddDay()
         this.option = {
             xAxis: {
               type: 'category',
@@ -34,7 +36,7 @@ class DayAdd extends React.Component{
             ]
         };
 
-        this.chartDom = document.getElementById('main');
+        this.chartDom = document.getElementById('heal');
         let myChart = echarts.init(this.chartDom);
         this.option && myChart.setOption(this.option)
     }
@@ -56,7 +58,7 @@ class DayAdd extends React.Component{
         this.testData[mostIndex] = {
             value: val,
             itemStyle: {
-              color: '#a90000'
+              color: 'green'
             }
         }
     }
@@ -67,7 +69,7 @@ class DayAdd extends React.Component{
             let newData = sevenDayData.chinaDayAddList.reverse().slice(0,7).reverse();
             // console.log(newData);
             newData.forEach(el=>{
-                this.testData.push(el.localConfirmadd)
+                this.testData.push(el.heal)
                 this.testDate.push(el.date)
             })
         }).catch(err=>{
@@ -85,12 +87,12 @@ class DayAdd extends React.Component{
     {
         return(
             <div>
-                <div className="title">七日本土新增确诊</div>
-                <div id="main" style={{width:"100%",height:'15rem',marginTop:'-40px'}}></div>
+                <div className="title">七日康复人数</div>
+                <div id="heal" style={{width:"100%",height:'15rem',marginTop:'-40px'}}></div>
             </div>
         )
     }
 }
 export {
-    DayAdd
+    Heal
 }

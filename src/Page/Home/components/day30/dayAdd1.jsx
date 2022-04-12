@@ -17,7 +17,7 @@ class Day30Add1 extends React.Component
     {
         // 得到数据
         await this.getData()
-        console.log('this.testData',this.testData);
+        // console.log('this.testData',this.testData);
         this.getMostAddDay()
         this.option = {
             xAxis: {
@@ -66,7 +66,7 @@ class Day30Add1 extends React.Component
         await axios.get('/api1/g2/getOnsInfo?name=disease_other').then(res=>{
             let sevenDayData = eval("("+res.data.data+")")
             let newData = sevenDayData.chinaDayAddList.reverse().slice(0,30).reverse();
-            console.log(newData);
+            // console.log(newData);
             newData.forEach(el=>{
                 this.testData.push(el.localinfectionadd)
                 this.testDate.push(el.date)

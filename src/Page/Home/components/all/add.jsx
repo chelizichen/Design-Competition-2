@@ -17,7 +17,7 @@ class AllAdd extends React.Component{
     {
         // 得到数据
         await this.getData()
-        console.log('this.testData',this.testData);
+        // console.log('this.testData',this.testData);
         let currData = this.getMostAddDay()
         this.option = {
             tooltip: {
@@ -115,7 +115,7 @@ class AllAdd extends React.Component{
         await axios.get('/api1/g2/getOnsInfo?name=disease_other').then(res=>{
             let sevenDayData = eval("("+res.data.data+")")
             let newData = sevenDayData.chinaDayList
-            console.log('newData',newData);
+            // console.log('newData',newData);
             newData.forEach(el=>{
                 this.testData.push(el.confirm)
                 this.testDate.push(el.date)
