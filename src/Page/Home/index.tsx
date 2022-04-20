@@ -40,11 +40,8 @@ class Home extends React.Component{
                 <Map/>
 
                 <AllAdd/>
-                <NavLink className="day30" to="day30">
-                    30 日
-                </NavLink>
                 <Routes>
-                    {/* <Route path="/" element={<Index7/>}></Route> */}
+                    <Route path="/" element={<Index7/>}></Route>
                     <Route path="day7" element={<Index7/>}></Route>
                     <Route path="day30" element={<Index30/>}></Route>
                 </Routes>

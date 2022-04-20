@@ -46,16 +46,9 @@ class Heal extends React.Component
     */
     getMostAddDay()
     {
-        let mostIndex = 0
-        for(let i =0;i<this.testData.length-1;i++)
-        {
-            if(this.testData[i+1]>this.testData[i])
-            {
-                mostIndex = i+1
-            }
-        }
-        let val = this.testData[mostIndex]
-        this.testData[mostIndex] = {
+        let mostValue = Math.max(...this.testData)
+        let val = this.testData[this.testData.indexOf(mostValue)]
+        this.testData[this.testData.indexOf(mostValue)] = {
             value: val,
             itemStyle: {
               color: 'green'

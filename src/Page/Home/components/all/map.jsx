@@ -40,7 +40,7 @@ class Map extends React.Component{
         return(
             <div>
                 <div className="title">全国共有<span style={{color:'green'}}>{this.state.notZeroNowConfirm}</span>个城市今日无新增</div>
-                <div className="title">全国共有<span style={{color:'red'}}>{this.state.zeroNowConfirm}</span>今日有确诊</div>
+                <div className="title">全国共有<span style={{color:'red'}}>{this.state.zeroNowConfirm}</span>个城市今日有确诊</div>
                 {/* <div id="allAdd" style={{width:"100%",height:'15rem',marginTop:'-40px'}}></div> */}
             </div>
         )

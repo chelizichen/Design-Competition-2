@@ -1,9 +1,16 @@
 .news1
 {
-    font-size: 30px;
+    font-size: 20px;
     text-decoration: none;
     color: black;
     font-weight: 900;
+    display: block;
+    text-indent: 40px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.news1 ::after{
+    content: "...";
 }
 .innerSpan
 {

@@ -29,15 +29,15 @@ class AllAdd extends React.Component{
             title: {
               left: 'center',
             },
-            toolbox: {
-              feature: {
-                dataZoom: {
-                  yAxisIndex: 'none'
-                },
-                restore: {},
-                saveAsImage: {}
-              }
-            },
+            // toolbox: {
+            //   feature: {
+            //     dataZoom: {
+            //       yAxisIndex: 'none'
+            //     },
+            //     restore: {},
+            //     saveAsImage: {}
+            //   }
+            // },
             xAxis: {
               type: 'category',
               boundaryGap: false,
@@ -137,7 +137,7 @@ class AllAdd extends React.Component{
         return(
             <div>
                 <div className="title">全国每日新增数据</div>
-                <div id="allAdd" style={{width:"100%",height:'15rem',marginTop:'-40px'}}></div>
+                <div id="allAdd" style={{width:"110%",height:'15rem',marginTop:'-10px'}}></div>
             </div>
         )
     }
