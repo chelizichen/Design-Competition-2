@@ -109,8 +109,13 @@ class Province extends React.Component{
     getData()
     {
         axios.get('/api1/g2/getOnsInfo?name=disease_h5').then(res=>{
-            // console.log(res);
+          console.log(res);
+          
+          // console.log(JSON.parse(res.data.data));
+          // console.log(res.data);
+
             let newData = eval("("+res.data.data+")")
+            // let newData = JSON.parse(res.data.data)
             // console.log('getData',newData);
             let children = newData.areaTree[0].children.slice(1,7)
 
@@ -123,11 +128,11 @@ class Province extends React.Component{
                 // this.totalNowConfirm.push(newArray[i].total.nowConfirm)
                 this.heal.push(newArray[i].total.heal)
             }
-            console.log('this.confirm',this.confirm);
-            console.log('this.name',this.name);
-            console.log('this.totalConfirm',this.totalConfirm);
-            console.log('this.totalNowConfirm',this.totalNowConfirm);
-            console.log('this.heal',this.heal);
+            // console.log('this.confirm',this.confirm);
+            // console.log('this.name',this.name);
+            // console.log('this.totalConfirm',this.totalConfirm);
+            // console.log('this.totalNowConfirm',this.totalNowConfirm);
+            // console.log('this.heal',this.heal);
 
             this.setState({
                 provinceName:children[0].name

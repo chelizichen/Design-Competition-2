@@ -56,6 +56,7 @@ class DayAdd extends React.Component{
     async getData()
     {
         await axios.get('/api1/g2/getOnsInfo?name=disease_other').then(res=>{
+            console.log(res.data);
             let sevenDayData = eval("("+res.data.data+")")
             let newData = sevenDayData.chinaDayAddList.reverse().slice(0,7).reverse();
             // console.log(newData);

@@ -23,6 +23,9 @@ class Province1 extends React.Component{
         this.heal = []
         this.totalNowConfirm =[]
     }
+    looseJsonParse(obj){
+        return Function('return (' + obj + ')')();
+    }
     async componentDidMount()
     {
         // 得到数据
@@ -106,21 +109,19 @@ class Province1 extends React.Component{
         let myChart = echarts.init(this.chartDom);
         this.option && myChart.setOption(this.option)
     }
-    getData()
+    async getData()
     {
-        axios.get('/api1/g2/getOnsInfo?name=disease_h5').then(res=>{
-            // console.log(res);
-            let newData = eval("("+res.data.data+")")
-            // console.log('getData',newData);
+        await axios.get('/api1/g2/getOnsInfo?name=disease_h5').then(res=>{
+          // let newData = eval("("+res.data.data+")")
+          let newData = this.looseJsonParse(res.data.data)
+            // let newData = eval("("+res.data.data+")")
             let children = newData.areaTree[0].children.slice(1,7)
-
             let newArray = children[1].children
             for(let i =0;i<newArray.length;i++)
             {
                 this.confirm.push(newArray[i].today.confirm)
                 this.name.push(newArray[i].name)
                 this.totalConfirm.push(newArray[i].total.confirm)
-                // this.totalNowConfirm.push(newArray[i].total.nowConfirm)
                 this.heal.push(newArray[i].total.heal)
             }
             // console.log('this.confirm',this.confirm);
@@ -133,7 +134,7 @@ class Province1 extends React.Component{
                 provinceName:children[1].name
             })
 
-            console.log(children);
+            // console.log(children);
         }).catch(err=>{
             console.log(err);
         })
