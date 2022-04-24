@@ -36,9 +36,9 @@ class Country extends React.Component{
             
             <div  style={{width:'100%',overflow:'clip'}}>
                 {/* <URLComponent/> */}
-                {/* <Tab/> */}
+                <Tab/>
 
-                {/* <Vaccine/>
+                <Vaccine/>
                 <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',width:'100%',height:'auto'}}>
                     <Pine1/>
                     <Pine2/>
@@ -47,13 +47,13 @@ class Country extends React.Component{
                 <Pro1/>
                 <Pro2/>
                 <Pro3/>
-                <Pro4/> */}
-                <Recently/>
-                {/* <Province/> */}
+                <Pro4/>
+                {/* <Recently/> */}
+                <Province/>
                 {/* <Province1/> */}
                 {/* <Province2/> */}
                 {/* <Province3/> */}
-                {/* <Regress/> */}
+                <Regress/>
             </div>
         )
     }

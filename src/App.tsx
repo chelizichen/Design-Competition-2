@@ -13,7 +13,7 @@ function App() {
         <div className="navLink">
           <NavLink to='Home' className={ ({isActive}) =>'defaultStyle'  + (isActive ?' activeStyle':'')} >首页</NavLink>
           <NavLink to='Country' className={ ({isActive}) =>'defaultStyle'  + (isActive ?' activeStyle':'')} >全国疫情</NavLink>
-          <NavLink to='News' className={ ({isActive}) =>'defaultStyle'  + (isActive ?' activeStyle':'')} >新闻</NavLink>
+          <NavLink to='News' className={ ({isActive}) =>'defaultStyle'  + (isActive ?' activeStyle':'')} >最新消息</NavLink>
         </div>
         <Routes>
           <Route path="Home/*" element={<Home/>}></Route>
