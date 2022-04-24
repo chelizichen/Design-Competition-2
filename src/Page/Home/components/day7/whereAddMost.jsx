@@ -70,7 +70,7 @@ class WhereAddMost extends React.Component{
             }
             this.newSeriesData =   seriesData.sort((a,b)=>{
                 return b.value - a.value
-            }).slice(0,7)
+            }).slice(0,3)
             for(let i =0;i<this.newSeriesData.length;i++)
             {
                 this.testData.push(this.newSeriesData[i].value)

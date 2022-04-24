@@ -8,12 +8,11 @@ function URLComponent()
     // https://c.m.163.com/ug/api/wuhan/app/data/list-total api4
     // api/wuhan/app/data/list-total
     useEffect(()=>{
-        fetch('/api1/g2/getOnsInfo?name=disease_h5',{
+        fetch('/api1/g2/getOnsInfo?name=disease_other',{
             method:"GET",
             headers:{
                 'Content-Type':"application/json"
             }
-            
         }).then(res=>res.json()).then(res=>{
             console.log(res);
             console.log(eval("("+res.data+")"));
