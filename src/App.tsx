@@ -4,6 +4,7 @@ import {BrowserRouter, NavLink,Routes,Route} from 'react-router-dom'
 import { Country } from './Page/Country';
 import { Home } from './Page/Home';
 import { News } from './Page/News';
+import { PublicComponents } from './Page/News/components/publicComponents';
 
 // 页面导航栏 放在底部
 function App() {
@@ -19,13 +20,15 @@ function App() {
           <Route path="Home/*" element={<Home/>}></Route>
           <Route path="Country/*" element={<Country/>}></Route>
           <Route path="News/*" element={<News/>}></Route>
+          <Route path="Detail/*" element={<PublicComponents/>}></Route>
+
         </Routes>
       </BrowserRouter>
-      <div className="author">
+      {/* <div className="author">
         <div> 作者 ******</div>
         <div> 学校 武汉城市学院</div>
         <div> 专业班级： *******</div>
-      </div>
+      </div> */}
     </div>
   );
 }
