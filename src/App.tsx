@@ -24,11 +24,11 @@ function App() {
 
         </Routes>
       </BrowserRouter>
-      {/* <div className="author">
+      <div className="author">
         <div> 作者 ******</div>
         <div> 学校 武汉城市学院</div>
         <div> 专业班级： *******</div>
-      </div> */}
+      </div>
     </div>
   );
 }

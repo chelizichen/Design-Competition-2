@@ -13,7 +13,6 @@ function PublicComponents()
     useEffect(()=>{
         // console.log(params[0].get('province'));
         let province:any = params[0].get('province')
-        let p_data = {}
         axios.get('/api1/g2/getOnsInfo?name=disease_other').then(res=>{
             let data = eval("("+res.data.data+")")
             // console.log(data.provinceCompare[province]);
@@ -39,7 +38,7 @@ function PublicComponents()
     },[])
     return(
         <div>
-            <h1>123</h1>
+            {/* <h1>123</h1> */}
             <CLD1 ojb1={obj1} obj2={obj2}></CLD1>
         </div>
     )
