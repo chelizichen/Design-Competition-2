@@ -4,6 +4,8 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 20px;
+    /* background-color: #bb2b2b; */
 }
 .tabIn
 {
@@ -13,4 +15,18 @@
     flex-direction: column;
     width: 30%;
     height: 100px;
+    background-color: rgb(232 232 232);
+    border: 2px solid rgb(238, 238, 238);
+    box-shadow: 2px 2px 5px rgb(218, 202, 199);
+    border-radius: 3px;
+    margin: 3px;
+}
+.tabIn div:nth-child(1)
+{
+    font-size: 23px;
+}
+.tabIn div:nth-child(2)
+{
+    font-size: 18px;
+    color: rgb(233, 78, 78);
 }

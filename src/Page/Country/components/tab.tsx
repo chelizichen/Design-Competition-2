@@ -26,7 +26,7 @@ function Tab()
     },[])
     return (
         <div>
-            <div>上次更新时间{time}</div>
+            <div className="title">上次更新时间{time}</div>
             <div className="tabBg">
                 <div className="tabIn">
                     <div>今日确诊</div>

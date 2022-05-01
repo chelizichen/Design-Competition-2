@@ -148,7 +148,7 @@ class Pro4 extends React.Component{
     {
         return(
             <div style={{width:"100%"}}>
-                <h1>{this.state.provinceName}地区疫情图</h1>
+                <div className="title">{this.state.provinceName}地区疫情图</div>
                 <div id="Pro4" style={{width:"100%",height:'15rem'}}></div>
             </div>
         )

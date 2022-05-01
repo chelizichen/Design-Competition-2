@@ -49,7 +49,7 @@ class Country extends React.Component{
                 <Pro3/>
                 <Pro4/>
                 {/* <Recently/> */}
-                <Province/>
+                {/* <Province/> */}
                 {/* <Province1/> */}
                 {/* <Province2/> */}
                 {/* <Province3/> */}
