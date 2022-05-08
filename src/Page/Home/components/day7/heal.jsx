@@ -60,11 +60,13 @@ class Heal extends React.Component
         await axios.get('/api1/g2/getOnsInfo?name=disease_other').then(res=>{
             let sevenDayData = eval("("+res.data.data+")")
             let newData = sevenDayData.chinaDayAddList.reverse().slice(0,7).reverse();
+            console.log(newData);
             // console.log(newData);
             newData.forEach(el=>{
-                this.testData.push(el.heal)
+                this.testData.push(Math.abs(el.heal))
                 this.testDate.push(el.date)
             })
+            console.log('this.testData',this.testData);
         }).catch(err=>{
             console.log(err);
         })

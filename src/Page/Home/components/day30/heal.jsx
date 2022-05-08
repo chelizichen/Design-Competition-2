@@ -61,7 +61,7 @@ class Heal30 extends React.Component
             let newData = sevenDayData.chinaDayAddList.reverse().slice(0,30).reverse();
             // console.log(newData);
             newData.forEach(el=>{
-                this.testData.push(el.heal)
+                this.testData.push(Math.abs(el.heal))
                 this.testDate.push(el.date)
             })
         }).catch(err=>{

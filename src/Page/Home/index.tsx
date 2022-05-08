@@ -36,7 +36,7 @@ class Home extends React.Component{
         return(
             <div style={{width:'100%',overflow:'clip'}}>
                 <h1 style={{textAlign:"center"}}> 现有确诊 <span style={{color:"red"}}>{this.state.nowConfirm}</span> 人 </h1>
-                <Update/>
+                {/* <Update/> */}
                 <Map/>
 
                 <AllAdd/>

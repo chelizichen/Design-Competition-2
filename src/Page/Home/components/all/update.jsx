@@ -20,12 +20,12 @@ class Update extends React.Component{
     {
         await axios.get('/api1/g2/getOnsInfo?name=disease_h5').then(res=>{
             let data = eval("("+res.data.data+")")
-            console.log(data);
-            this.setState({
-                lastUpdateTime:data.lastUpdateTime,
-                noInfect:data.chinaTotal.noInfect,
-                heal:data.chinaTotal.heal
-            })
+            console.log('data New',data);
+            // this.setState({
+            //     lastUpdateTime:data.lastUpdateTime,
+            //     noInfect:data.chinaTotal.noInfect,
+            //     heal:data.chinaTotal.heal
+            // })
         }).catch(err=>{
             console.log(err);
         })
